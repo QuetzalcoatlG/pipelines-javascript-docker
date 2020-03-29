@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: quetzalcoatlgpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: quetzalcoatlgpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: quetzalcoatlgpipelinesjavascriptdocker 
+          image: mycontainerregistryquetza.azurecr.io/quetzalcoatlgpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
